@@ -10,9 +10,9 @@ def counting_sort(numbers):
         index = value - min_val # setting the index to zero 
         count_num[index] += 1 
 
-    sorted_num = [] 
-    for index, item in enumerate(count_num): 
-        sorted_num.extend([index + min_val] * item)
+    sorted_num = [] # creating empty arr
+    for index, item in enumerate(count_num):   # loop is just using the enumerate to the arr
+        sorted_num.extend([index + min_val] * item)  # using the extend function to add the sorted number to arr
     return sorted_num
 
 # numbers = [4,2,3,8,5,4,1,4,8]

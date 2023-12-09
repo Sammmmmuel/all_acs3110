@@ -108,7 +108,7 @@ class PrefixTreeTest(unittest.TestCase):
         assert tree.root.is_terminal() is False
         assert tree.root.num_children() == 1
         assert tree.root.has_child('A') is True
-        # Verify node 'A' again
+        # # Verify node 'A' again
         assert node_A.character == 'A'
         assert node_A.is_terminal() is True  # Node 'A' is now terminal
         assert node_A.num_children() == 1  # Node 'A' still has one child
@@ -241,7 +241,9 @@ class PrefixTreeTest(unittest.TestCase):
             tree.insert(string)
             input_strings.append(string)
             # Verify tree can retrieve all strings that have been inserted
+        
             tree_strings = tree.strings()
+            
             assert len(tree_strings) == len(input_strings)  # Check length only
             self.assertCountEqual(tree_strings, input_strings)  # Ignore order
 
